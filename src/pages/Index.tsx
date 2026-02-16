@@ -40,114 +40,114 @@ const Index = () => {
     rewards: []
   });
 
-  // Biblical themes and questions database
+  // Temas bíblicos e banco de perguntas
   const biblicalThemes = [
-    "Creation",
-    "Noah's Ark",
-    "Moses",
-    "David and Goliath",
-    "Daniel in the Lions' Den",
-    "Birth of Jesus",
-    "Miracles of Jesus",
-    "Parables",
-    "The Ten Commandments",
-    "The Good Samaritan",
-    "The Prodigal Son",
-    "Easter Story",
-    "Christmas Story",
-    "The Apostles",
-    "The Fruits of the Spirit"
+    "Criação",
+    "Arca de Noé",
+    "Moisés",
+    "Davi e Golias",
+    "Daniel na Cova dos Leões",
+    "Nascimento de Jesus",
+    "Milagres de Jesus",
+    "Parábolas",
+    "Os Dez Mandamentos",
+    "O Bom Samaritano",
+    "O Filho Pródigo",
+    "História da Páscoa",
+    "História do Natal",
+    "Os Apóstolos",
+    "Os Frutos do Espírito"
   ];
 
   const questionsDatabase: Question[] = [
-    // Creation
-    { id: "1", text: "What did God create on the first day?", options: ["Animals", "Light", "Plants", "Water"], correctAnswer: 1, theme: "Creation" },
-    { id: "2", text: "How many days did it take God to create the world?", options: ["5 days", "6 days", "7 days", "10 days"], correctAnswer: 1, theme: "Creation" },
-    { id: "3", text: "What did God create on the seventh day?", options: ["Animals", "Plants", "He rested", "The sun"], correctAnswer: 2, theme: "Creation" },
+    // Criação
+    { id: "1", text: "O que Deus criou no primeiro dia?", options: ["Animais", "Luz", "Plantas", "Água"], correctAnswer: 1, theme: "Criação" },
+    { id: "2", text: "Quantos dias Deus levou para criar o mundo?", options: ["5 dias", "6 dias", "7 dias", "10 dias"], correctAnswer: 1, theme: "Criação" },
+    { id: "3", text: "O que Deus criou no sétimo dia?", options: ["Animais", "Plantas", "Ele descansou", "O sol"], correctAnswer: 2, theme: "Criação" },
     
-    // Noah's Ark
-    { id: "4", text: "How many of each animal did Noah take on the ark?", options: ["One", "Two", "Three", "Four"], correctAnswer: 1, theme: "Noah's Ark" },
-    { id: "5", text: "What did God use to show His promise to Noah?", options: ["A rainbow", "A star", "A mountain", "A river"], correctAnswer: 0, theme: "Noah's Ark" },
-    { id: "6", text: "How long did the rain last during the flood?", options: ["40 days", "30 days", "50 days", "60 days"], correctAnswer: 0, theme: "Noah's Ark" },
+    // Arca de Noé
+    { id: "4", text: "Quantos de cada animal Noé levou na arca?", options: ["Um", "Dois", "Três", "Quatro"], correctAnswer: 1, theme: "Arca de Noé" },
+    { id: "5", text: "O que Deus usou para mostrar sua promessa a Noé?", options: ["Um arco-íris", "Uma estrela", "Uma montanha", "Um rio"], correctAnswer: 0, theme: "Arca de Noé" },
+    { id: "6", text: "Por quantos dias choveu durante o dilúvio?", options: ["40 dias", "30 dias", "50 dias", "60 dias"], correctAnswer: 0, theme: "Arca de Noé" },
     
-    // Moses
-    { id: "7", text: "What did God give Moses on Mount Sinai?", options: ["A sword", "The Ten Commandments", "A crown", "A map"], correctAnswer: 1, theme: "Moses" },
-    { id: "8", text: "How did Moses part the Red Sea?", options: ["With a boat", "With his hands", "With God's power", "With a bridge"], correctAnswer: 2, theme: "Moses" },
-    { id: "9", text: "What did Moses turn into a snake?", options: ["His staff", "His robe", "His sandals", "His hat"], correctAnswer: 0, theme: "Moses" },
+    // Moisés
+    { id: "7", text: "O que Deus deu a Moisés no Monte Sinai?", options: ["Uma espada", "Os Dez Mandamentos", "Uma coroa", "Um mapa"], correctAnswer: 1, theme: "Moisés" },
+    { id: "8", text: "Como Moisés partiu o Mar Vermelho?", options: ["Com um barco", "Com as mãos", "Com o poder de Deus", "Com uma ponte"], correctAnswer: 2, theme: "Moisés" },
+    { id: "9", text: "O que Moisés transformou em cobra?", options: ["Sua vara", "Sua roupa", "Seus sandálias", "Sua chapéu"], correctAnswer: 0, theme: "Moisés" },
     
-    // David and Goliath
-    { id: "10", text: "Who killed Goliath?", options: ["Saul", "Jonathan", "David", "Samuel"], correctAnswer: 2, theme: "David and Goliath" },
-    { id: "11", text: "What did David use to fight Goliath?", options: ["A sword", "A spear", "A slingshot", "A shield"], correctAnswer: 2, theme: "David and Goliath" },
-    { id: "12", text: "How tall was Goliath?", options: ["6 feet", "7 feet", "8 feet", "9 feet"], correctAnswer: 1, theme: "David and Goliath" },
+    // Davi e Golias
+    { id: "10", text: "Quem matou Golias?", options: ["Saul", "Jonatã", "Davi", "Samuel"], correctAnswer: 2, theme: "Davi e Golias" },
+    { id: "11", text: "O que Davi usou para lutar contra Golias?", options: ["Uma espada", "Uma lança", "Uma funda", "Um escudo"], correctAnswer: 2, theme: "Davi e Golias" },
+    { id: "12", text: "Quão alto era Golias?", options: ["6 pés", "7 pés", "8 pés", "9 pés"], correctAnswer: 1, theme: "Davi e Golias" },
     
-    // Daniel in the Lions' Den
-    { id: "13", text: "Why was Daniel thrown into the lions' den?", options: ["He stole food", "He prayed to God", "He broke the law", "He ran away"], correctAnswer: 1, theme: "Daniel in the Lions' Den" },
-    { id: "14", text: "What happened to the lions?", options: ["They ate Daniel", "They slept", "They ran away", "They talked"], correctAnswer: 1, theme: "Daniel in the Lions' Den" },
-    { id: "15", text: "How many days was Daniel in the lions' den?", options: ["1 day", "2 days", "3 days", "7 days"], correctAnswer: 2, theme: "Daniel in the Lions' Den" },
+    // Daniel na Cova dos Leões
+    { id: "13", text: "Por que Daniel foi jogado na cova dos leões?", options: ["Ele roubou comida", "Ele orava a Deus", "Ele quebrou a lei", "Ele fugiu"], correctAnswer: 1, theme: "Daniel na Cova dos Leões" },
+    { id: "14", text: "O que aconteceu com os leões?", options: ["Eles comeram Daniel", "Eles dormiram", "Eles fugiram", "Eles falaram"], correctAnswer: 1, theme: "Daniel na Cova dos Leões" },
+    { id: "15", text: "Por quantos dias Daniel ficou na cova dos leões?", options: ["1 dia", "2 dias", "3 dias", "7 dias"], correctAnswer: 2, theme: "Daniel na Cova dos Leões" },
     
-    // Birth of Jesus
-    { id: "16", text: "Where was Jesus born?", options: ["Jerusalem", "Bethlehem", "Nazareth", "Egypt"], correctAnswer: 1, theme: "Birth of Jesus" },
-    { id: "17", text: "What did the wise men follow to find Jesus?", options: ["A star", "A cloud", "A voice", "A dream"], correctAnswer: 0, theme: "Birth of Jesus" },
-    { id: "18", text: "What gifts did the wise men bring Jesus?", options: ["Toys, clothes, books", "Gold, frankincense, myrrh", "Food, water, clothes", "Animals, tools, money"], correctAnswer: 1, theme: "Birth of Jesus" },
+    // Nascimento de Jesus
+    { id: "16", text: "Onde Jesus nasceu?", options: ["Jerusalém", "Belém", "Nazaré", "Egito"], correctAnswer: 1, theme: "Nascimento de Jesus" },
+    { id: "17", text: "O que os magos seguiram para encontrar Jesus?", options: ["Uma estrela", "Uma nuvem", "Uma voz", "Um sonho"], correctAnswer: 0, theme: "Nascimento de Jesus" },
+    { id: "18", text: "Quais presentes os magos trouxeram para Jesus?", options: ["Brinquedos, roupas, livros", "Ouro, incenso, mirra", "Comida, água, roupas", "Animais, ferramentas, dinheiro"], correctAnswer: 1, theme: "Nascimento de Jesus" },
     
-    // Miracles of Jesus
-    { id: "19", text: "How many loaves and fishes did Jesus use to feed 5000 people?", options: ["2 loaves, 5 fishes", "5 loaves, 2 fishes", "7 loaves, 3 fishes", "3 loaves, 7 fishes"], correctAnswer: 1, theme: "Miracles of Jesus" },
-    { id: "20", text: "What did Jesus turn water into?", options: ["Milk", "Wine", "Juice", "Honey"], correctAnswer: 1, theme: "Miracles of Jesus" },
-    { id: "21", text: "Who did Jesus raise from the dead?", options: ["Lazarus", "Peter", "John", "James"], correctAnswer: 0, theme: "Miracles of Jesus" },
+    // Milagres de Jesus
+    { id: "19", text: "Quantos pães e peixes Jesus usou para alimentar 5000 pessoas?", options: ["2 pães, 5 peixes", "5 pães, 2 peixes", "7 pães, 3 peixes", "3 pães, 7 peixes"], correctAnswer: 1, theme: "Milagres de Jesus" },
+    { id: "20", text: "O que Jesus transformou água em?", options: ["Leite", "Vinho", "Suco", "Mel"], correctAnswer: 1, theme: "Milagres de Jesus" },
+    { id: "21", text: "Quem Jesus ressuscitou dos mortos?", options: ["Lázaro", "Pedro", "João", "Tiago"], correctAnswer: 0, theme: "Milagres de Jesus" },
     
-    // Parables
-    { id: "22", text: "In the Good Samaritan story, who helped the injured man?", options: ["A priest", "A Levite", "A Samaritan", "A soldier"], correctAnswer: 2, theme: "Parables" },
-    { id: "23", text: "What does the Prodigal Son do when he returns home?", options: ["Demands money", "Repents and asks for forgiveness", "Runs away again", "Fights with his father"], correctAnswer: 1, theme: "Parables" },
-    { id: "24", text: "In the story of the Lost Sheep, how many sheep did the shepherd have?", options: ["90", "95", "99", "100"], correctAnswer: 3, theme: "Parables" },
+    // Parábolas
+    { id: "22", text: "Na história do Bom Samaritano, quem ajudou o homem ferido?", options: ["Um sacerdote", "Um levita", "Um samaritano", "Um soldado"], correctAnswer: 2, theme: "Parábolas" },
+    { id: "23", text: "O que o Filho Pródigo faz quando volta para casa?", options: ["Exige dinheiro", "Arrepende-se e pede perdão", "Foge novamente", "Briga com o pai"], correctAnswer: 1, theme: "Parábolas" },
+    { id: "24", text: "Na história da Ovelha Perdida, quantas ovelhas o pastor tinha?", options: ["90", "95", "99", "100"], correctAnswer: 3, theme: "Parábolas" },
     
-    // The Ten Commandments
-    { id: "25", text: "What is the first commandment?", options: ["Do not steal", "Do not kill", "Love God with all your heart", "Honor your parents"], correctAnswer: 2, theme: "The Ten Commandments" },
-    { id: "26", text: "What commandment tells us to remember the Sabbath day?", options: ["First commandment", "Fourth commandment", "Seventh commandment", "Tenth commandment"], correctAnswer: 1, theme: "The Ten Commandments" },
-    { id: "27", text: "What commandment tells us not to lie?", options: ["Third commandment", "Eighth commandment", "Ninth commandment", "Tenth commandment"], correctAnswer: 2, theme: "The Ten Commandments" },
+    // Os Dez Mandamentos
+    { id: "25", text: "Qual é o primeiro mandamento?", options: ["Não roubar", "Não matar", "Ame a Deus de todo o seu coração", "Honre seus pais"], correctAnswer: 2, theme: "Os Dez Mandamentos" },
+    { id: "26", text: "Qual mandamento nos diz para lembrar do dia do sábado?", options: ["Primeiro mandamento", "Quarto mandamento", "Sétimo mandamento", "Décimo mandamento"], correctAnswer: 1, theme: "Os Dez Mandamentos" },
+    { id: "27", text: "Qual mandamento nos diz para não mentir?", options: ["Terceiro mandamento", "Oitavo mandamento", "Nono mandamento", "Décimo mandamento"], correctAnswer: 2, theme: "Os Dez Mandamentos" },
     
-    // Easter Story
-    { id: "28", text: "What happened on Easter Sunday?", options: ["Jesus was born", "Jesus was baptized", "Jesus rose from the dead", "Jesus ascended to heaven"], correctAnswer: 2, theme: "Easter Story" },
-    { id: "29", text: "Who found the empty tomb?", options: ["Peter and John", "Mary Magdalene", "The disciples", "The Roman soldiers"], correctAnswer: 1, theme: "Easter Story" },
-    { id: "30", text: "How many days was Jesus in the tomb?", options: ["1 day", "2 days", "3 days", "4 days"], correctAnswer: 2, theme: "Easter Story" },
+    // História da Páscoa
+    { id: "28", text: "O que aconteceu no Domingo de Páscoa?", options: ["Jesus nasceu", "Jesus foi batizado", "Jesus ressuscitou dos mortos", "Jesus subiu ao céu"], correctAnswer: 2, theme: "História da Páscoa" },
+    { id: "29", text: "Quem encontrou o túmulo vazio?", options: ["Pedro e João", "Maria Madalena", "Os discípulos", "Os soldados romanos"], correctAnswer: 1, theme: "História da Páscoa" },
+    { id: "30", text: "Por quantos dias Jesus ficou no túmulo?", options: ["1 dia", "2 dias", "3 dias", "4 dias"], correctAnswer: 2, theme: "História da Páscoa" },
     
-    // Christmas Story
-    { id: "31", text: "What angel appeared to Mary?", options: ["Michael", "Gabriel", "Raphael", "Uriel"], correctAnswer: 1, theme: "Christmas Story" },
-    { id: "32", text: "What animals were in the stable where Jesus was born?", options: ["Cows and sheep", "Donkeys and cows", "Sheep and donkeys", "All of the above"], correctAnswer: 3, theme: "Christmas Story" },
-    { id: "33", text: "What did the shepherds see in the sky?", options: ["A star", "An angel", "A cloud", "A rainbow"], correctAnswer: 1, theme: "Christmas Story" },
+    // História do Natal
+    { id: "31", text: "Qual anjo apareceu a Maria?", options: ["Miguel", "Gabriel", "Rafael", "Uriel"], correctAnswer: 1, theme: "História do Natal" },
+    { id: "32", text: "Quais animais estavam na estrebaria onde Jesus nasceu?", options: ["Vacas e ovelhas", "Burros e vacas", "Ovelhas e burros", "Todas as acima"], correctAnswer: 3, theme: "História do Natal" },
+    { id: "33", text: "O que os pastores viram no céu?", options: ["Uma estrela", "Um anjo", "Uma nuvem", "Um arco-íris"], correctAnswer: 1, theme: "História do Natal" },
     
-    // The Apostles
-    { id: "34", text: "How many apostles did Jesus have?", options: ["10", "11", "12", "13"], correctAnswer: 2, theme: "The Apostles" },
-    { id: "35", text: "Which apostle betrayed Jesus?", options: ["Peter", "John", "Judas", "Thomas"], correctAnswer: 2, theme: "The Apostles" },
-    { id: "36", text: "Which apostle denied knowing Jesus three times?", options: ["Peter", "James", "John", "Andrew"], correctAnswer: 0, theme: "The Apostles" },
+    // Os Apóstolos
+    { id: "34", text: "Quantos apóstolos Jesus tinha?", options: ["10", "11", "12", "13"], correctAnswer: 2, theme: "Os Apóstolos" },
+    { id: "35", text: "Qual apóstolo traiu Jesus?", options: ["Pedro", "João", "Judas", "Tomé"], correctAnswer: 2, theme: "Os Apóstolos" },
+    { id: "36", text: "Qual apóstolo negou conhecer Jesus três vezes?", options: ["Pedro", "Tiago", "João", "André"], correctAnswer: 0, theme: "Os Apóstolos" },
     
-    // The Fruits of the Spirit
-    { id: "37", text: "What is the first fruit of the Spirit?", options: ["Joy", "Love", "Peace", "Patience"], correctAnswer: 1, theme: "The Fruits of the Spirit" },
-    { id: "38", text: "Which fruit of the Spirit means being kind to others?", options: ["Goodness", "Kindness", "Gentleness", "Faithfulness"], correctAnswer: 1, theme: "The Fruits of the Spirit" },
-    { id: "39", text: "What does self-control help us do?", options: ["Eat more candy", "Control our actions and words", "Stay up late", "Be selfish"], correctAnswer: 1, theme: "The Fruits of the Spirit" },
+    // Os Frutos do Espírito
+    { id: "37", text: "Qual é o primeiro fruto do Espírito?", options: ["Alegria", "Amor", "Paz", "Paciência"], correctAnswer: 1, theme: "Os Frutos do Espírito" },
+    { id: "38", text: "Qual fruto do Espírito significa ser gentil com os outros?", options: ["Bondade", "Gentileza", "Fidelidade", "Paciência"], correctAnswer: 1, theme: "Os Frutos do Espírito" },
+    { id: "39", text: "O que o autocontrole nos ajuda a fazer?", options: ["Comer mais doces", "Controlar nossas ações e palavras", "Ficar acordado até tarde", "Ser egoísta"], correctAnswer: 1, theme: "Os Frutos do Espírito" },
     
-    // Additional questions
-    { id: "40", text: "What is the name of the boat that Noah built?", options: ["The Ark", "The Ship", "The Boat", "The Vessel"], correctAnswer: 0, theme: "Noah's Ark" },
-    { id: "41", text: "Who was the king that David served before becoming king?", options: ["Saul", "Solomon", "Rehoboam", "Jeroboam"], correctAnswer: 0, theme: "David and Goliath" },
-    { id: "42", text: "What did Jonah do when God told him to go to Nineveh?", options: ["Obeyed immediately", "Ran away", "Prayed for guidance", "Asked for help"], correctAnswer: 1, theme: "Prophets" },
-    { id: "43", text: "How many disciples did Jesus choose to be his apostles?", options: ["8", "10", "12", "15"], correctAnswer: 2, theme: "Jesus Ministry" },
-    { id: "44", text: "What did Jesus teach us to pray in the Lord's Prayer?", options: ["For money", "For food", "For God's kingdom", "For fame"], correctAnswer: 2, theme: "Teachings of Jesus" },
-    { id: "45", text: "What is the golden rule?", options: ["Do unto others as you would have them do unto you", "Always tell the truth", "Share your toys", "Be kind to animals"], correctAnswer: 0, theme: "Teachings of Jesus" },
-    { id: "46", text: "What did Jesus say is the greatest commandment?", options: ["Love your neighbor", "Honor your parents", "Love God with all your heart", "Keep the Sabbath"], correctAnswer: 2, theme: "Teachings of Jesus" },
-    { id: "47", text: "What did Jesus use to heal the blind man?", options: ["A special medicine", "Mud and water", "His hands", "A prayer"], correctAnswer: 1, theme: "Miracles of Jesus" },
-    { id: "48", text: "What did Jesus say about children?", options: ["They are annoying", "They are the greatest in the kingdom of heaven", "They should be quiet", "They should work"], correctAnswer: 1, theme: "Teachings of Jesus" },
-    { id: "49", text: "What did Jesus feed the 4000 people with?", options: ["Bread and fish", "Bread and meat", "Bread and cheese", "Bread and fruit"], correctAnswer: 0, theme: "Miracles of Jesus" },
-    { id: "50", text: "What did Jesus say about worry?", options: ["Worry about everything", "Don't worry about tomorrow", "Worry about money", "Worry about what others think"], correctAnswer: 1, theme: "Teachings of Jesus" }
+    // Perguntas adicionais
+    { id: "40", text: "Qual é o nome do barco que Noé construiu?", options: ["A Arca", "O Navio", "O Barco", "O Vaso"], correctAnswer: 0, theme: "Arca de Noé" },
+    { id: "41", text: "Quem era o rei que Davi serviu antes de se tornar rei?", options: ["Saul", "Salomão", "Roboão", "Jeroboão"], correctAnswer: 0, theme: "Davi e Golias" },
+    { id: "42", text: "O que Jonas fez quando Deus disse para ele ir a Nínive?", options: ["Obedeceu imediatamente", "Fugiu", "Orou por orientação", "Pediu ajuda"], correctAnswer: 1, theme: "Profetas" },
+    { id: "43", text: "Quantos discípulos Jesus escolheu para serem seus apóstolos?", options: ["8", "10", "12", "15"], correctAnswer: 2, theme: "Ministério de Jesus" },
+    { id: "44", text: "O que Jesus nos ensinou a orar no Pai Nosso?", options: ["Por dinheiro", "Por comida", "Pelo reino de Deus", "Por fama"], correctAnswer: 2, theme: "Ensinos de Jesus" },
+    { id: "45", text: "Qual é a regra de ouro?", options: ["Faça aos outros como você gostaria que fizessem a você", "Sempre diga a verdade", "Compartilhe seus brinquedos", "Seja gentil com os animais"], correctAnswer: 0, theme: "Ensinos de Jesus" },
+    { id: "46", text: "O que Jesus disse é o maior mandamento?", options: ["Ame seu próximo", "Honre seus pais", "Ame a Deus de todo o seu coração", "Guarde o sábado"], correctAnswer: 2, theme: "Ensinos de Jesus" },
+    { id: "47", text: "O que Jesus usou para curar o cego?", options: ["Um remédio especial", "Lama e água", "Suas mãos", "Uma oração"], correctAnswer: 1, theme: "Milagres de Jesus" },
+    { id: "48", text: "O que Jesus disse sobre as crianças?", options: ["Elas são irritantes", "Elas são as maiores no reino dos céus", "Elas devem ficar quietas", "Elas devem trabalhar"], correctAnswer: 1, theme: "Ensinos de Jesus" },
+    { id: "49", text: "O que Jesus alimentou as 4000 pessoas com?", options: ["Pão e peixe", "Pão e carne", "Pão e queijo", "Pão e frutas"], correctAnswer: 0, theme: "Milagres de Jesus" },
+    { id: "50", text: "O que Jesus disse sobre preocupações?", options: ["Preocupe-se com tudo", "Não se preocupe com o amanhã", "Preocupe-se com dinheiro", "Preocupe-se com o que os outros pensam"], correctAnswer: 1, theme: "Ensinos de Jesus" }
   ];
 
   const [currentQuestions, setCurrentQuestions] = useState<Question[]>([]);
 
-  // Generate random questions for each quiz
+  // Gerar perguntas aleatórias para cada quiz
   const generateRandomQuestions = () => {
     const shuffled = [...questionsDatabase].sort(() => 0.5 - Math.random());
     return shuffled.slice(0, 10);
   };
 
-  // Initialize quiz
+  // Iniciar quiz
   const startQuiz = () => {
     const newQuestions = generateRandomQuestions();
     setCurrentQuestions(newQuestions);
@@ -156,10 +156,10 @@ const Index = () => {
     setSelectedAnswer(null);
     setIsAnswered(false);
     setQuizCompleted(false);
-    showSuccess("Quiz started! Good luck! 🌟");
+    showSuccess("Quiz começou! Boa sorte! 🌟");
   };
 
-  // Handle answer selection
+  // Lidar com seleção de resposta
   const handleAnswerSelect = (answerIndex: number) => {
     if (isAnswered) return;
     
@@ -177,24 +177,24 @@ const Index = () => {
         currentStreak: prev.currentStreak + 1,
         bestStreak: Math.max(prev.bestStreak, prev.currentStreak + 1)
       }));
-      showSuccess("Correct! 🎉");
+      showSuccess("Correto! 🎉");
     } else {
       setStats(prev => ({
         ...prev,
         currentStreak: 0
       }));
-      showError("Try again! 🤔");
+      showError("Tente novamente! 🤔");
     }
   };
 
-  // Move to next question
+  // Ir para próxima pergunta
   const nextQuestion = () => {
     if (currentQuestion < 9) {
       setCurrentQuestion(currentQuestion + 1);
       setSelectedAnswer(null);
       setIsAnswered(false);
     } else {
-      // Quiz completed
+      // Quiz concluído
       setQuizCompleted(true);
       setStats(prev => ({
         ...prev,
@@ -202,28 +202,28 @@ const Index = () => {
         totalQuestions: prev.totalQuestions + 10
       }));
       
-      // Award rewards based on performance
+      // Conceder recompensas baseadas no desempenho
       const rewards = [];
-      if (score >= 8) rewards.push("🏆 Bible Master");
-      if (score >= 6) rewards.push("⭐ Super Star");
-      if (score >= 4) rewards.push("🌟 Faithful Friend");
-      if (score >= 2) rewards.push("💖 Kind Heart");
+      if (score >= 8) rewards.push("🏆 Mestre da Bíblia");
+      if (score >= 6) rewards.push("⭐ Super Estrela");
+      if (score >= 4) rewards.push("🌟 Amigo Fiel");
+      if (score >= 2) rewards.push("💖 Coração Bondoso");
       
       setStats(prev => ({
         ...prev,
         rewards: [...prev.rewards, ...rewards]
       }));
       
-      showSuccess(`Quiz completed! You scored ${score}/10! 🎊`);
+      showSuccess(`Quiz concluído! Você marcou ${score}/10! 🎊`);
     }
   };
 
-  // Restart quiz with new questions
+  // Reiniciar quiz com novas perguntas
   const restartQuiz = () => {
     startQuiz();
   };
 
-  // Initialize on first load
+  // Inicializar no primeiro carregamento
   useEffect(() => {
     startQuiz();
   }, []);
@@ -233,7 +233,7 @@ const Index = () => {
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-400 via-pink-300 to-blue-400">
         <div className="text-center">
           <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-white mx-auto mb-4"></div>
-          <p className="text-white text-xl font-bold">Loading your adventure...</p>
+          <p className="text-white text-xl font-bold">Carregando sua aventura...</p>
         </div>
       </div>
     );
@@ -244,22 +244,22 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-400 via-pink-300 to-blue-400 p-4">
       <div className="max-w-4xl mx-auto">
-        {/* Header */}
+        {/* Cabeçalho */}
         <div className="text-center mb-8">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">
-            🌟 Bible Quest 🌟
+            🌟 Questão Bíblica 🌟
           </h1>
           <p className="text-xl text-white/90 mb-6">
-            Learn God's Word through fun quizzes and adventures!
+            Aprenda a Palavra de Deus através de quizzes divertidos e aventuras!
           </p>
           
-          {/* Stats Display */}
+          {/* Exibição de Estatísticas */}
           <div className="flex justify-center gap-4 mb-6">
             <Card className="bg-white/20 backdrop-blur-sm border-white/30">
               <CardContent className="p-3">
                 <div className="flex items-center gap-2">
                   <Trophy className="text-yellow-400" />
-                  <span className="text-white font-bold">Score: {score}/10</span>
+                  <span className="text-white font-bold">Pontuação: {score}/10</span>
                 </div>
               </CardContent>
             </Card>
@@ -268,7 +268,7 @@ const Index = () => {
               <CardContent className="p-3">
                 <div className="flex items-center gap-2">
                   <Star className="text-orange-400" />
-                  <span className="text-white font-bold">Streak: {stats.currentStreak}</span>
+                  <span className="text-white font-bold">Sequência: {stats.currentStreak}</span>
                 </div>
               </CardContent>
             </Card>
@@ -283,16 +283,16 @@ const Index = () => {
             </Card>
           </div>
           
-          {/* Progress Bar */}
+          {/* Barra de Progresso */}
           <div className="w-full max-w-md mx-auto mb-6">
             <Progress value={(currentQuestion + 1) * 10} className="h-3 bg-white/20" />
             <p className="text-white/80 text-sm mt-2">
-              Question {currentQuestion + 1} of 10
+              Pergunta {currentQuestion + 1} de 10
             </p>
           </div>
         </div>
 
-        {/* Quiz Area */}
+        {/* Área do Quiz */}
         {!quizCompleted ? (
           <Card className="bg-white/95 backdrop-blur-sm border-4 border-yellow-300 shadow-2xl">
             <CardHeader className="text-center">
@@ -348,23 +348,23 @@ const Index = () => {
                     onClick={nextQuestion}
                     className="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-lg"
                   >
-                    {currentQuestion < 9 ? "Next Question" : "Finish Quiz"}
+                    {currentQuestion < 9 ? "Próxima Pergunta" : "Finalizar Quiz"}
                   </Button>
                 </div>
               )}
             </CardContent>
           </Card>
         ) : (
-          /* Quiz Results */
+          /* Resultados do Quiz */
           <Card className="bg-white/95 backdrop-blur-sm border-4 border-yellow-300 shadow-2xl">
             <CardHeader className="text-center">
               <div className="mb-4">
                 <div className="text-6xl mb-4">🎉</div>
                 <CardTitle className="text-3xl font-bold text-gray-800 mb-2">
-                  Quiz Completed!
+                  Quiz Concluído!
                 </CardTitle>
                 <p className="text-xl text-gray-600">
-                  You scored {score} out of 10!
+                  Você marcou {score} de 10!
                 </p>
               </div>
             </CardHeader>
@@ -372,10 +372,10 @@ const Index = () => {
             <CardContent>
               <div className="text-center mb-6">
                 <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 mb-4">
-                  {score >= 8 ? "🏆 Bible Master!" : 
-                   score >= 6 ? "⭐ Super Star!" : 
-                   score >= 4 ? "🌟 Faithful Friend!" : 
-                   score >= 2 ? "💖 Kind Heart!" : "🌈 Keep Learning!"}
+                  {score >= 8 ? "🏆 Mestre da Bíblia!" : 
+                   score >= 6 ? "⭐ Super Estrela!" : 
+                   score >= 4 ? "🌟 Amigo Fiel!" : 
+                   score >= 2 ? "💖 Coração Bondoso!" : "🌈 Continue Aprendendo!"}
                 </div>
                 
                 <div className="flex justify-center gap-2 mb-6">
@@ -388,19 +388,19 @@ const Index = () => {
                 
                 <div className="grid grid-cols-2 gap-4 mb-6 text-left">
                   <div className="bg-blue-50 p-4 rounded-lg">
-                    <p className="font-semibold text-blue-800">Total Quizzes</p>
+                    <p className="font-semibold text-blue-800">Total de Quizzes</p>
                     <p className="text-2xl font-bold text-blue-600">{stats.totalQuizzes}</p>
                   </div>
                   <div className="bg-green-50 p-4 rounded-lg">
-                    <p className="font-semibold text-green-800">Correct Answers</p>
+                    <p className="font-semibold text-green-800">Respostas Corretas</p>
                     <p className="text-2xl font-bold text-green-600">{stats.correctAnswers}</p>
                   </div>
                   <div className="bg-purple-50 p-4 rounded-lg">
-                    <p className="font-semibold text-purple-800">Best Streak</p>
+                    <p className="font-semibold text-purple-800">Melhor Sequência</p>
                     <p className="text-2xl font-bold text-purple-600">{stats.bestStreak}</p>
                   </div>
                   <div className="bg-pink-50 p-4 rounded-lg">
-                    <p className="font-semibold text-pink-800">Rewards Earned</p>
+                    <p className="font-semibold text-pink-800">Recompensas Ganhas</p>
                     <p className="text-2xl font-bold text-pink-600">{stats.rewards.length}</p>
                   </div>
                 </div>
@@ -409,18 +409,18 @@ const Index = () => {
                   onClick={restartQuiz}
                   className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-3 px-8 rounded-full shadow-lg text-lg"
                 >
-                  🚀 Start New Adventure!
+                  🚀 Começar Nova Aventura!
                 </Button>
               </div>
             </CardContent>
           </Card>
         )}
 
-        {/* Made with Dyad */}
+        {/* Feito com Dyad */}
         <div className="mt-8 text-center">
           <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 inline-block">
             <p className="text-white text-sm">
-              Made with ❤️ for God's little ones
+              Feito com ❤️ para os pequenos de Deus
             </p>
           </div>
         </div>
